@@ -1,0 +1,124 @@
+body {
+	background: #DCDCDC url(../images/bg-footer.gif) repeat-y center;
+	color: #606060;
+	line-height: 2em;
+}
+h1, h2, h3, h4 {
+	color: #606060;
+	font-family: Arial,Helvetica,Geneva,sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#wrapper a, #sidebar h2 {
+	color: #606060;
+}
+#footer a {
+	color: #eee;
+}
+#footer h2 {
+	color: #eee;
+}
+a:hover, #wrapper a:hover, #footer a:hover, #sidebar a:hover {
+	color: #f0cb29;
+}
+.prepend-top { margin-top: 2.5em; }
+.append-bottom { margin-bottom: 2.5em; }
+#wrapper {
+	background: #DCDCDC url(../images/bg.gif) repeat-y center;
+	width: 950px;
+	margin: 0 auto;
+}
+#graphic-bar {
+	background: #606060;
+	height: 7px;
+}
+#sidebar {
+	background: none;
+}
+#sidebar h2, #footer h2 {
+	margin-bottom: .25em;
+}
+#footer {
+	color: #eee;
+	background: #606060;
+}
+#footer h2 {
+	font-family: Georgia,Times,serif;
+	font-weight: normal;
+}
+#logo {
+	font-size: 5em;
+}
+#logo a {	text-decoration: none; }
+h2.title {
+	margin-bottom: 0;
+}
+h2.title a {
+	text-decoration: none;
+}
+.posted-on {
+	color: #A6A6A6;
+}
+a#rss {
+	background: url(../images/feed-icon-14x14.png) no-repeat;
+}
+a.comments {
+	background: url(../images/comment.png) no-repeat 0 2px;
+}
+a.share {
+	background: url(../images/share.gif) no-repeat 0 3px;
+	display: block;
+	width: 50px;
+}
+a.link-icon {
+	text-decoration: none;
+	padding-left: 20px;
+}
+a.continue {
+	font-size: 1.1em;
+	font-weight: bold;
+	float: right;
+}
+
+/* article comments */
+ul.comment-list {
+	margin: 0;
+}
+ul.comment-list li {
+	list-style-type: none;
+}
+.author {
+	font-weight: bold;
+}
+.author, ul.comment-list .posted-on {
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+.comment-list .comment-body {
+	margin-left: 1em;
+}
+
+/* article comment form */
+form#comment-form label {
+	font-weight: normal;
+	display: block;
+	width: 6.5em;
+	float: left;
+	font-size: 1.2em;
+	text-align: right;
+	margin-right: 10px;
+}
+form#comment-form label.required {
+	font-weight: bold;
+}
+form#comment-form p {
+	background: #eee;
+	margin: 2px;
+	padding: 10px;
+}
+form#comment-form input#submit {
+	margin-left: 9.5em;
+}
+#comment_author_url {
+	width: 34em;
+}

@@ -1,0 +1,17 @@
+<div id="article-{{ article.id }}" class="article-container">
+	
+	<h2 class="title">{{ article | link_to_article }}</h2>
+	<p class="posted-on">
+	</p>
+	<div class="body">
+	  {% if article.excerpt %}
+	    {{ article.excerpt }}
+		{% endif %}
+	  {{ article.body }}
+	</div>
+	
+	<div class="meta">
+		<a href="#" class="link-icon share" id="share-{{ article.id }}">Share This</a>
+	</div>
+	
+</div>

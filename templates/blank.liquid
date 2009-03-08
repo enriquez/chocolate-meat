@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>{{ site.title }} {% if article %} {{ article.title }} {% else %} {{ site.subtitle }} {% endif %}</title>
+  <meta name="generator" content="Mephisto" />
+	{{ 'screen' | stylesheet : 'screen, projection' }}
+	{{ 'print' | stylesheet : 'print' }}
+	<!--[if IE]>
+	{{ 'ie' | stylesheet : 'screen, projection' }}
+	<![endif]-->
+	{{ 'lazy' | stylesheet : 'screen, projection' }}
+  {{ 'main' | stylesheet : 'screen, projection' }}
+  {{ site.home_section | articles_feed }}
+</head>
+	<body>
+		<div id="wrapper">
+			<div class="container">
+			
+				<div id="graphic-bar" class="span-24 last"></div>
+			
+				<div id="content" class="span-15 prepend-top append-bottom prepend-1 append-1">
+					<h1 id="logo"><a href="/">{{ site.title }}</a></h1>
+					{{ content_for_layout }}
+				</div><!-- content -->
+			
+			</div><!-- container -->
+		</div><!-- wrapper -->
+		
+		<div class="container">
+			
+			<div id="footer" class="last append-1 prepend-1">
+				
+				<div id="column-1" class="span-6 prepend-top append-bottom">
+				</div>
+				
+				<div id="column-2" class="span-8 prepend-1 append-1 prepend-top append-bottom">
+				</div>
+				
+				<div id="column-3" class="span-6 prepend-top append-bottom last">
+				</div>
+				
+			</div><!-- footer -->
+			
+		</div>
+	</body>
+</html>

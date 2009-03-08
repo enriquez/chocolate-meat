@@ -1,0 +1,43 @@
+{% for article in articles %}
+<div id="article-{{ article.id }}" class="article-container">
+	
+	<h2 class="title">{{ article | link_to_article }}</h2>
+	<p class="posted-on">
+		{{ article.published_at | format_date: 'mdy', true }} 	
+	</p>
+	<div class="body">
+	  {% if article.excerpt %}
+	    {{ article.excerpt }}
+	    {% unless mode == 'single' %}
+		  <a href="{{ article.url }}" class="continue">Continue Reading &raquo;</a>
+		  {% endunless %}
+		{% else %}
+		  {% unless mode == 'single' %}{{ article.body }}{% endunless %}
+		{% endif %}
+		{% if mode == 'single' %}
+		  {{ article.body }}
+		{% endif %}
+	</div>
+	
+	<div class="meta">
+		{% unless mode == 'single' %}
+		  {% if article.accept_comments %}
+				<a href="{{ article.url }}#comments" class="link-icon comments">{{ article.comments_count | pluralize: 'comment' }}</a>
+			{% endif %}
+		{% else %}
+			<!-- AddThis Button BEGIN -->
+			<div><script type="text/javascript">var addthis_pub="enriquez";</script>
+			<a class="link-icon share" href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', 'http://{{ site.host }}{{ article.url }}', '{{ article.title }}')" onmouseout="addthis_close()" onclick="return addthis_sendto()"> Share</a><script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script></div>
+			<!-- AddThis Button END -->
+		{% endunless %}
+		
+	</div>
+	
+</div>
+<hr/>
+{% endfor %}
+{% if mode == 'single' %}
+  <div class="commentsblock">
+    {% include 'comments' %}
+  </div>
+{% endif %}

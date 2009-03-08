@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+{% head %}
+	<title>{% if article %} {{ article.title }} - {% else %} {{ site.subtitle }} - {% endif %} {{ site.title }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Mephisto" />
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="change_this_to_your_feedburner_url" />
+
+	{{ 'screen' | stylesheet : 'screen, projection' }}
+	{{ 'print' | stylesheet : 'print' }}
+	<!--[if IE]>
+	{{ 'ie' | stylesheet : 'screen, projection' }}
+	<![endif]-->
+	{{ 'lazy' | stylesheet : 'screen, projection' }}
+  {{ 'main' | stylesheet : 'screen, projection' }}
+{% endhead %}
+	<body>
+		<div id="wrapper">
+			<div class="container">
+			
+				<div id="graphic-bar" class="span-24 last"></div>
+			
+				<div id="content" class="span-15 prepend-top append-bottom prepend-1 append-1">
+					<h1 id="logo"><a href="/">{{ site.title }}</a></h1>
+					{{ content_for_layout }}
+				</div><!-- content -->
+			
+				<div id="sidebar" class="span-5 box last">
+					<h2>Search</h2>
+		      <form method="get" id="sform" action="/search">
+						<p id="search">
+							<input type="text" name="q" value="" id="q" class="span-4" /><input type="submit" name="search" value="Go" id="go" class="span-2" />
+						</p>
+					</form>
+					<h2>Subscribe</h2>
+					<p id="subscribe">
+						<a href="change_this_to_your_feedburner_url" class="link-icon" id="rss">{{ site.title }} RSS</a>
+					</p>
+				</div>
+			
+			</div><!-- container -->
+		</div><!-- wrapper -->
+		
+		<div class="container">
+			
+			<div id="footer" class="last append-1 prepend-1">
+				
+				<div id="column-1" class="span-6 prepend-top append-bottom">
+				</div>
+				
+				<div id="column-2" class="span-8 prepend-1 append-1 prepend-top append-bottom">
+					<h2>About</h2>
+					<p>
+						Place a description about yourself here.
+					</p>
+					<p>
+						powered by <a href="http://mephistoblog.com">Mephisto</a> / styled with <a href="http://theezpzway.com/2009/3/8/chocolate-meat-mephisto-theme">Chocolate Meat</a>
+					</p>
+				</div>
+				
+				<div id="column-3" class="span-6 prepend-top append-bottom last">
+				</div>
+				
+			</div><!-- footer -->
+			
+		</div>
+	</body>
+</html>
