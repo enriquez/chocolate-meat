@@ -18,7 +18,7 @@ h2. Features
 
 h2. Download
 
-"chocolate_meat-1.0.zip":http://theezpzway.com/assets/2009/3/8/chocolate_meat-1.0.zip
+"chocolate_meat-1.0.zip":http://cloud.github.com/downloads/enriquez/chocolate-meat/chocolate_meat-1.0.zip
 
 h2. Install
 
